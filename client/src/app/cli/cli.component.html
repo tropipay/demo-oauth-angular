@@ -1,0 +1,26 @@
+  <input type="hidden" #selection>
+
+  <div class="card-container">
+    <button class="card card-small" (click)="selection.value = 'name'" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <span>User Name</span>
+    </button>
+
+    <button class="card card-small" (click)="selection.value = 'email'" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <span>User Email</span>
+    </button>
+
+    <button class="card card-small" (click)="selection.value = 'balance'" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <span>User Balance</span>
+    </button>
+  </div>
+
+  <!-- Terminal -->
+  <div class="terminal" [ngSwitch]="selection.value">
+      <pre *ngSwitchDefault> User Name: {{user.name}} </pre>
+      <pre *ngSwitchCase="'name'"> User Name: {{user.name}} </pre>
+      <pre *ngSwitchCase="'email'"> User Email: {{user.email}} </pre>
+      <pre *ngSwitchCase="'balance'"> User Balance: {{user.balance}} </pre>
+  </div>
