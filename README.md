@@ -13,6 +13,9 @@ This app is a simple example of integration with TropiPay using technologies suc
 - npm run client:watch
 - npm start 
 
+## Demo 
+![Screenshot](front.jpg)
+
 ## Project skeleton 
 ```
 - client 
